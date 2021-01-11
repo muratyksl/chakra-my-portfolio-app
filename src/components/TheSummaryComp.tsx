@@ -31,18 +31,18 @@ export const TheSummaryComp: React.FC<Props> = (props: Props) => {
                     <Flex direction="column">
                         <Stat mb="3">
                             <StatLabel>Dollar Value</StatLabel>
-                            <StatNumber>{usdTotalValue}</StatNumber>
+                            <StatNumber>{`$${usdTotalValue}`}</StatNumber>
                             <StatHelpText>
                                 <StatArrow type="increase" />
-                                {`${increase}`}
+                                {`%${increase}`}
                             </StatHelpText>
                         </Stat>
                         <Stat>
                             <StatLabel>TL Value</StatLabel>
-                            <StatNumber>{tlTotalValue}</StatNumber>
+                            <StatNumber>{`${tlTotalValue}₺`}</StatNumber>
                             <StatHelpText>
                                 <StatArrow type="increase" />
-                                {`${increase}`}
+                                {`%${increase}`}
                             </StatHelpText>
                         </Stat>
                     </Flex>
