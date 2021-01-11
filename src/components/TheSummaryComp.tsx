@@ -21,8 +21,8 @@ export const TheSummaryComp: React.FC<Props> = (props: Props) => {
                 <Box fontSize="sm">
                     <PieChart
                         data={[
-                            { title: 'USD', value: 10, color: '#E38627' },
-                            { title: 'TL', value: 15, color: '#C13C37' },
+                            { title: 'USD', value: 10, color: '#85BB65' },
+                            { title: 'TL', value: 15, color: '#40e0d0' },
                         ]}
                         label={({ dataEntry }) => dataEntry.title}
                     />
@@ -51,5 +51,3 @@ export const TheSummaryComp: React.FC<Props> = (props: Props) => {
         </Box>
     );
 };
-
-export default TheSummaryComp;
