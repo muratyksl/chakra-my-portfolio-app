@@ -1,8 +1,9 @@
-import { Box, Flex, Stat, StatLabel, StatNumber, StatHelpText, StatArrow } from '@chakra-ui/react';
+import { Box, Flex, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, IconButton } from '@chakra-ui/react';
 import * as React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-type Props = {
+import { AddIcon } from '@chakra-ui/icons';
+type TheSummaryCompProps = {
     tlTotalValue: number;
     usdTotalValue: number;
     increase: number;
@@ -12,9 +13,7 @@ type Props = {
     // };
 };
 
-export const TheSummaryComp: React.FC<Props> = (props: Props) => {
-    const { tlTotalValue, usdTotalValue, increase } = props;
-
+export const TheSummaryComp = ({ tlTotalValue, usdTotalValue, increase }: TheSummaryCompProps): JSX.Element => {
     return (
         <Box borderWidth="2px" borderRadius="lg" m="3" p="3">
             <Flex align="center" justify="space-evenly">
@@ -46,6 +45,14 @@ export const TheSummaryComp: React.FC<Props> = (props: Props) => {
                             </StatHelpText>
                         </Stat>
                     </Flex>
+                </Box>
+                <Box>
+                    <IconButton
+                        justifySelf="flex-end"
+                        colorScheme="blue"
+                        aria-label="Search database"
+                        icon={<AddIcon />}
+                    />
                 </Box>
             </Flex>
         </Box>
